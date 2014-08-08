@@ -3,11 +3,69 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
+              android:weightSum="1">
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Hello World, MyActivity"
             />
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp" android:layout_weight="1.11">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Game"
+                android:id="@+id/btnStartGame"
+                android:width="200dp"
+                android:layout_above="@+id/imgBtnFacebook" android:layout_alignStart="@+id/btnInstructions"
+                android:layout_marginBottom="120dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instructions"
+                android:id="@+id/btnInstructions"
+                android:width="200dp"
+                android:layout_below="@+id/btnHighScore" android:layout_centerHorizontal="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High Score"
+                android:id="@+id/btnHighScore"
+                android:width="200dp"
+                android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnFacebook"
+                android:layout_marginBottom="60dp" android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/btnInstructions"
+                android:layout_marginTop="60dp" android:layout_marginLeft="0dp"
+                android:paddingLeft="80dp" android:paddingTop="40dp" android:paddingRight="0dp"
+                android:paddingBottom="10dp"/>
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:id="@+id/imgBtnTwitter"
+                     android:layout_alignTop="@+id/imgBtnFacebook" android:layout_alignEnd="@+id/btnInstructions"
+                     android:paddingLeft="30dp" android:paddingTop="30dp" android:paddingBottom="30dp"
+                     android:paddingRight="40dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Options"
+                android:id="@+id/btnOptions" android:layout_below="@+id/btnInstructions"
+                android:layout_alignStart="@+id/btnInstructions" android:layout_alignEnd="@+id/btnInstructions"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/ic_launcher" android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/imgBtnTwitter" android:layout_alignStart="@+id/btnStartGame"
+                android:layout_above="@+id/btnStartGame"/>
+    </RelativeLayout>
 </LinearLayout>
 
